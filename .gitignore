@@ -1,0 +1,7 @@
+*.tar.gz
+!apr-1.7.4.tar.gz
+!apr-util-1.6.3.tar.gz
+apache
+expat
+pcre
+.github
