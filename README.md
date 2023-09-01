@@ -2,7 +2,7 @@
 
 # `apache` 交叉编译安装流程
 
-该仓库用于交叉编译 `RISCV` 版本的 `apache`。交叉编译器使用 `riscv64-unknown-l`
+该仓库用于交叉编译 `RISCV` 版本的 `apache`，源码下载链接 [https://dlcdn.apache.org/httpd/httpd-2.4.57.tar.bz2](https://dlcdn.apache.org/httpd/httpd-2.4.57.tar.bz2) 。交叉编译器使用 `riscv64-unknown-l`
 `inux-gnu`
 
 `apache` 安装的官方文档地址：
@@ -45,7 +45,7 @@ export LD_LIBRARY_PATH=$RV64LUX/sysroot/lib:$LD_LIBRARY_PATH
 
 ### 操作系统添加可执行格式
 
-为了使得操作系统能够通过 `./`  方式运行 `riscv64` 架构的可执行文件，需要为操作系统注册，详情可参考：https://docs.kernel.org/admin-guide/binfmt-misc.html。通过如下方式：
+为了使得操作系统能够通过 `./`  方式运行 `riscv64` 架构的可执行文件，需要为操作系统注册，详情可参考：[https://docs.kernel.org/admin-guide/binfmt-misc.html](https://docs.kernel.org/admin-guide/binfmt-misc.html)。通过如下方式：
 
 需要将 `qemu-riscv64` 的路径设置为自己本机上的路径
 
@@ -66,4 +66,4 @@ export LD_LIBRARY_PATH=$RV64LUX/sysroot/lib:$LD_LIBRARY_PATH
 
 ## 编译
 
-随后执行 `make` 即可编译得到相关的目标文件，位于 `apache` 文件夹中
+随后执行 `make` 即可编译得到相关的目标文件，位于 `apache` 文件夹中，相关依赖的 `pcre` 以及 `XML` 解析库都已经放到了仓库中 
