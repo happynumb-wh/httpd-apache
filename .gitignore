@@ -5,3 +5,9 @@ apache
 expat
 pcre
 .github
+httpd-2.4.5*
+pcre-8.45
+rootfs.img
+rootfs
+rootfs-installed
+sysroot

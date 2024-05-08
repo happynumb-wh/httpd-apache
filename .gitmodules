@@ -1,3 +1,19 @@
 [submodule "libexpat"]
 	path = libexpat
 	url = git@github.com:libexpat/libexpat.git
+[submodule "lua"]
+	path = lua
+	url = git@github.com:lua/lua.git
+	branch = v5.4
+[submodule "busybox"]
+	path = busybox
+	url = git@github.com:mirror/busybox.git
+	branch = 1_36_stable
+[submodule "curl"]
+	path = curl
+	url = git@github.com:curl/curl.git
+	branch = curl-8_7_1
+[submodule "haveged"]
+	path = haveged
+	url = git@github.com:jirka-h/haveged.git
+	branch = v1.9.8
