@@ -1,0 +1,27 @@
+#! /bin/sh
+#
+# Created by configure
+
+CC="riscv64-unknown-linux-gnu-gcc"; export CC
+"/home/wanghan/Workspace/DASICS_ICT/DASICS-DEMO/httpd-apache/httpd-2.4.59/srclib/apr-util/configure" \
+"--disable-option-checking" \
+"--host=riscv64-unknown-linux-gnu" \
+"--with-port=9001" \
+"--enable-charset-lite" \
+"--with-included-apr" \
+"--with-pcre=/home/wanghan/Workspace/DASICS_ICT/DASICS-DEMO/httpd-apache/apache/pcre/bin/pcre-config" \
+"--with-expat=/home/wanghan/Workspace/DASICS_ICT/DASICS-DEMO/httpd-apache/apache/expat" \
+"--enable-ssl" \
+"--enable-heartbeat" \
+"--enable-static-ab" \
+"host_alias=riscv64-unknown-linux-gnu" \
+"CC=riscv64-unknown-linux-gnu-gcc" \
+"--cache-file=/dev/null" \
+"--srcdir=/home/wanghan/Workspace/DASICS_ICT/DASICS-DEMO/httpd-apache/httpd-2.4.59/srclib/apr-util" \
+"--with-apr=../apr" \
+"--prefix=/apache" \
+"--exec-prefix=/apache" \
+"--libdir=/apache/lib" \
+"--includedir=/apache/include" \
+"--bindir=/apache/bin" \
+"$@"

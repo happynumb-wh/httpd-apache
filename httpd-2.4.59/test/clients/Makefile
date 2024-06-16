@@ -1,0 +1,25 @@
+top_srcdir   = /home/wanghan/Workspace/DASICS_ICT/DASICS-DEMO/httpd-apache/httpd-2.4.59
+top_builddir = /home/wanghan/Workspace/DASICS_ICT/DASICS-DEMO/httpd-apache/httpd-2.4.59
+srcdir       = /home/wanghan/Workspace/DASICS_ICT/DASICS-DEMO/httpd-apache/httpd-2.4.59/test/clients
+builddir     = /home/wanghan/Workspace/DASICS_ICT/DASICS-DEMO/httpd-apache/httpd-2.4.59/test/clients
+VPATH        = /home/wanghan/Workspace/DASICS_ICT/DASICS-DEMO/httpd-apache/httpd-2.4.59/test/clients
+DISTCLEAN_TARGETS = h2ws
+
+CLEAN_TARGETS = h2ws
+
+bin_PROGRAMS = h2ws
+TARGETS  = $(bin_PROGRAMS)
+
+PROGRAM_LDADD        = $(UTIL_LDFLAGS) $(PROGRAM_DEPENDENCIES) $(EXTRA_LIBS) $(AP_LIBS)
+PROGRAM_DEPENDENCIES =
+
+include $(top_builddir)/build/rules.mk
+
+h2ws.lo: h2ws.c
+	$(LIBTOOL) --mode=compile $(CC) $(ab_CFLAGS) $(ALL_CFLAGS) $(ALL_CPPFLAGS) \
+	    $(ALL_INCLUDES) $(PICFLAGS) $(LTCFLAGS) -c $< && touch $@
+h2ws_OBJECTS = h2ws.lo
+h2ws_LDADD = -lnghttp2
+h2ws: $(h2ws_OBJECTS)
+	$(LIBTOOL) --mode=link $(CC) $(ALL_CFLAGS) $(PILDFLAGS) \
+	    $(LT_LDFLAGS) $(ALL_LDFLAGS) -o $@ $(h2ws_LTFLAGS) $(h2ws_OBJECTS) $(h2ws_LDADD)
