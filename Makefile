@@ -75,7 +75,7 @@ endif
 # Compile the httpd apache server
 $(DIR_APACHE): $(BUILD_APR) $(BUILD_APR_UTIL) $(BUILD_PCRE) $(BUILD_EXPAT)
 	mkdir -p apache
-	cd $(DIR_HTTPD) && ./configure --host=$(CORRESS_COMPILE) --prefix=/apache $(APACHE_MODULE) --with-port=9001 --enable-charset-lite --with-included-apr --with-pcre=$(BUILD_PCRE)/bin/pcre-config --with-expat=$(BUILD_EXPAT) --enable-ssl --enable-heartbeat --enable-static-ab
+	cd $(DIR_HTTPD) && ./configure --host=$(CORRESS_COMPILE) --prefix=$(DIR_APACHE) $(APACHE_MODULE) --with-port=9001 --enable-charset-lite --with-included-apr --with-pcre=$(BUILD_PCRE)/bin/pcre-config --with-expat=$(BUILD_EXPAT) --enable-ssl --enable-heartbeat --enable-static-ab
 	$(MAKE) -C $(DIR_HTTPD) && $(MAKE) -C $(DIR_HTTPD) install
 
 
