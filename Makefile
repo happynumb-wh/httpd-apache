@@ -3,7 +3,7 @@
 # --------------------------------------------------------
 
 # Httpd file path
-DIR_HTTPD 		= $(PWD)/httpd-2.4.52
+DIR_HTTPD 		= $(PWD)/httpd-2.4.59
 
 # Pcre lib path
 DIR_PCRE 		= $(PWD)/pcre-8.45
@@ -75,14 +75,9 @@ endif
 # Compile the httpd apache server
 $(DIR_APACHE): $(BUILD_APR) $(BUILD_APR_UTIL) $(BUILD_PCRE) $(BUILD_EXPAT)
 	mkdir -p apache
-	cd $(DIR_HTTPD) && ./configure --host=$(CORRESS_COMPILE) --prefix=/apache $(APACHE_MODULE) --with-port=9001 --enable-charset-lite --with-included-apr --with-pcre=$(BUILD_PCRE)/bin/pcre-config --with-expat=$(BUILD_EXPAT)
+	cd $(DIR_HTTPD) && ./configure --host=$(CORRESS_COMPILE) --prefix=/apache $(APACHE_MODULE) --with-port=9001 --enable-charset-lite --with-included-apr --with-pcre=$(BUILD_PCRE)/bin/pcre-config --with-expat=$(BUILD_EXPAT) --enable-ssl --enable-heartbeat --enable-static-ab
 	$(MAKE) -C $(DIR_HTTPD) && $(MAKE) -C $(DIR_HTTPD) install
 
-
-
-
-# busybox: make ARCH=riscv CROSS_COMPILE=riscv64-unknown-linux-gnu- defconfig -j`nproc`
-# busybox: make ARCH=riscv CROSS_COMPILE=riscv64-unknown-linux-gnu- install -j`nproc`
 
 
 clean:

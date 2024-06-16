@@ -5,7 +5,7 @@ apache
 expat
 pcre
 .github
-httpd-2.4.5*
+httpd-2.4.5*.tar.bz2
 pcre-8.45
 rootfs.img
 rootfs
