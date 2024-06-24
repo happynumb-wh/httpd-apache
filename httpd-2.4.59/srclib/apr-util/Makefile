@@ -10,9 +10,9 @@ APRUTIL_DOTTED_VERSION=1.6.3
 srcdir = .
 
 
-INCLUDES = -I/home/wanghan/Workspace/DASICS_ICT/DASICS-DEMO/httpd-apache/httpd-2.4.59/srclib/apr-util/include -I/home/wanghan/Workspace/DASICS_ICT/DASICS-DEMO/httpd-apache/httpd-2.4.59/srclib/apr-util/include/private  -I/home/wanghan/Workspace/DASICS_ICT/DASICS-DEMO/httpd-apache/httpd-2.4.59/srclib/apr/include  -I/home/wanghan/Workspace/DASICS_ICT/DASICS-DEMO/httpd-apache/apache/expat/include
-APRUTIL_LDFLAGS = -L/home/wanghan/Workspace/DASICS_ICT/DASICS-DEMO/httpd-apache/apache/expat/lib
-APRUTIL_LIBS = -lexpat -lcrypt /home/wanghan/Workspace/DASICS_ICT/DASICS-DEMO/httpd-apache/httpd-2.4.59/srclib/apr/libapr-1.la -lpthread
+INCLUDES = -I/home/wanghan/Workspace/DASICS_ICT/DASICS-DEMO/demo-apache/httpd-apache/httpd-2.4.59/srclib/apr-util/include -I/home/wanghan/Workspace/DASICS_ICT/DASICS-DEMO/demo-apache/httpd-apache/httpd-2.4.59/srclib/apr-util/include/private  -I/home/wanghan/Workspace/DASICS_ICT/DASICS-DEMO/demo-apache/httpd-apache/httpd-2.4.59/srclib/apr/include  -I/home/wanghan/Workspace/DASICS_ICT/DASICS-DEMO/demo-apache/httpd-apache/apache/expat/include
+APRUTIL_LDFLAGS = -L/home/wanghan/Workspace/DASICS_ICT/DASICS-DEMO/demo-apache/httpd-apache/apache/expat/lib
+APRUTIL_LIBS = -lexpat -lcrypt /home/wanghan/Workspace/DASICS_ICT/DASICS-DEMO/demo-apache/httpd-apache/httpd-2.4.59/srclib/apr/libapr-1.la -lpthread
 
 TARGET_LIB = libaprutil-${APRUTIL_MAJOR_VERSION}.la
 INSTALL_SUBDIRS = 
@@ -47,8 +47,8 @@ LDADD_crypto_commoncrypto =
 TARGETS = $(TARGET_LIB) aprutil.exp apu-config.out $(APU_MODULES)
 
 # bring in rules.mk for standard functionality
-include /home/wanghan/Workspace/DASICS_ICT/DASICS-DEMO/httpd-apache/httpd-2.4.59/srclib/apr-util/build/rules.mk
-include /home/wanghan/Workspace/DASICS_ICT/DASICS-DEMO/httpd-apache/httpd-2.4.59/srclib/apr-util/build-outputs.mk
+include /home/wanghan/Workspace/DASICS_ICT/DASICS-DEMO/demo-apache/httpd-apache/httpd-2.4.59/srclib/apr-util/build/rules.mk
+include /home/wanghan/Workspace/DASICS_ICT/DASICS-DEMO/demo-apache/httpd-apache/httpd-2.4.59/srclib/apr-util/build-outputs.mk
 
 CLEAN_SUBDIRS = test 
 
@@ -68,8 +68,8 @@ exec_prefix=/apache
 bindir=${prefix}/bin
 libdir=${prefix}/lib
 includedir=/apache/include
-top_srcdir=/home/wanghan/Workspace/DASICS_ICT/DASICS-DEMO/httpd-apache/httpd-2.4.59/srclib/apr-util
-top_blddir=/home/wanghan/Workspace/DASICS_ICT/DASICS-DEMO/httpd-apache/httpd-2.4.59/srclib/apr-util
+top_srcdir=/home/wanghan/Workspace/DASICS_ICT/DASICS-DEMO/demo-apache/httpd-apache/httpd-2.4.59/srclib/apr-util
+top_blddir=/home/wanghan/Workspace/DASICS_ICT/DASICS-DEMO/demo-apache/httpd-apache/httpd-2.4.59/srclib/apr-util
 
 # Create apu-config script suitable for the install tree
 apu-config.out: $(APU_CONFIG)

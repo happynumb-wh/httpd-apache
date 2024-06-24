@@ -54,7 +54,7 @@ PROGRAMS = $(TESTALL_COMPONENTS) $(STDTEST_PORTABLE) $(STDTEST_NONPORTABLE) \
 TARGETS = $(PROGRAMS)
 
 # bring in rules.mk for standard functionality
-include /home/wanghan/Workspace/DASICS_ICT/DASICS-DEMO/httpd-apache/httpd-2.4.59/srclib/apr/build/apr_rules.mk
+include /home/wanghan/Workspace/DASICS_ICT/DASICS-DEMO/demo-apache/httpd-apache/httpd-2.4.59/srclib/apr/build/apr_rules.mk
 
 LOCAL_LIBS=../libapr-${APR_MAJOR_VERSION}.la
 

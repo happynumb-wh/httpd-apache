@@ -10,7 +10,7 @@ srcdir = .
 #   programs such as sockperf, that have to be invoked in a special sequence
 #   or with special parameters
 
-INCLUDES = -I/home/wanghan/Workspace/DASICS_ICT/DASICS-DEMO/httpd-apache/httpd-2.4.59/srclib/apr-util/include -I/home/wanghan/Workspace/DASICS_ICT/DASICS-DEMO/httpd-apache/httpd-2.4.59/srclib/apr-util/include/private  -I/home/wanghan/Workspace/DASICS_ICT/DASICS-DEMO/httpd-apache/httpd-2.4.59/srclib/apr/include  -I/home/wanghan/Workspace/DASICS_ICT/DASICS-DEMO/httpd-apache/apache/expat/include
+INCLUDES = -I/home/wanghan/Workspace/DASICS_ICT/DASICS-DEMO/demo-apache/httpd-apache/httpd-2.4.59/srclib/apr-util/include -I/home/wanghan/Workspace/DASICS_ICT/DASICS-DEMO/demo-apache/httpd-apache/httpd-2.4.59/srclib/apr-util/include/private  -I/home/wanghan/Workspace/DASICS_ICT/DASICS-DEMO/demo-apache/httpd-apache/httpd-2.4.59/srclib/apr/include  -I/home/wanghan/Workspace/DASICS_ICT/DASICS-DEMO/demo-apache/httpd-apache/apache/expat/include
 
 STDTEST_PORTABLE = dbd testall
 
@@ -28,9 +28,9 @@ LOCAL_LIBS = ../libaprutil-${APRUTIL_MAJOR_VERSION}1.la
 CLEAN_TARGETS = manyfile.bin testfile.txt data/sqlite*.db
 
 # bring in rules.mk for standard functionality
-include /home/wanghan/Workspace/DASICS_ICT/DASICS-DEMO/httpd-apache/httpd-2.4.59/srclib/apr-util/build/rules.mk
-APRUTIL_LIBS = -lexpat -lcrypt /home/wanghan/Workspace/DASICS_ICT/DASICS-DEMO/httpd-apache/httpd-2.4.59/srclib/apr/libapr-1.la -lpthread
-APRUTIL_LDFLAGS = $(ALL_LDFLAGS) -no-install -L/home/wanghan/Workspace/DASICS_ICT/DASICS-DEMO/httpd-apache/apache/expat/lib
+include /home/wanghan/Workspace/DASICS_ICT/DASICS-DEMO/demo-apache/httpd-apache/httpd-2.4.59/srclib/apr-util/build/rules.mk
+APRUTIL_LIBS = -lexpat -lcrypt /home/wanghan/Workspace/DASICS_ICT/DASICS-DEMO/demo-apache/httpd-apache/httpd-2.4.59/srclib/apr/libapr-1.la -lpthread
+APRUTIL_LDFLAGS = $(ALL_LDFLAGS) -no-install -L/home/wanghan/Workspace/DASICS_ICT/DASICS-DEMO/demo-apache/httpd-apache/apache/expat/lib
 
 # link programs using -no-install to get real executables not
 # libtool wrapper scripts which link an executable when first run.

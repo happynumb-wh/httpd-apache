@@ -28,15 +28,15 @@ libdir="${prefix}/lib"
 includedir="/apache/include"
 
 LIBS="-lexpat"
-INCLUDES="-I/home/wanghan/Workspace/DASICS_ICT/DASICS-DEMO/httpd-apache/apache/expat/include"
-LDFLAGS="-L/home/wanghan/Workspace/DASICS_ICT/DASICS-DEMO/httpd-apache/apache/expat/lib"
+INCLUDES="-I/home/wanghan/Workspace/DASICS_ICT/DASICS-DEMO/demo-apache/httpd-apache/apache/expat/include"
+LDFLAGS="-L/home/wanghan/Workspace/DASICS_ICT/DASICS-DEMO/demo-apache/httpd-apache/apache/expat/lib"
 LDAP_LIBS=""
 DBM_LIBS="  "
 
 APRUTIL_LIBNAME="aprutil-${APRUTIL_MAJOR_VERSION}"
 
-APU_SOURCE_DIR="/home/wanghan/Workspace/DASICS_ICT/DASICS-DEMO/httpd-apache/httpd-2.4.59/srclib/apr-util"
-APU_BUILD_DIR="/home/wanghan/Workspace/DASICS_ICT/DASICS-DEMO/httpd-apache/httpd-2.4.59/srclib/apr-util"
+APU_SOURCE_DIR="/home/wanghan/Workspace/DASICS_ICT/DASICS-DEMO/demo-apache/httpd-apache/httpd-2.4.59/srclib/apr-util"
+APU_BUILD_DIR="/home/wanghan/Workspace/DASICS_ICT/DASICS-DEMO/demo-apache/httpd-apache/httpd-2.4.59/srclib/apr-util"
 APR_XML_EXPAT_OLD="@APR_XML_EXPAT_OLD@"
 APU_DB_VERSION="0"
 

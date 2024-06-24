@@ -1,8 +1,8 @@
-top_srcdir   = /home/wanghan/Workspace/DASICS_ICT/DASICS-DEMO/httpd-apache/httpd-2.4.59
-top_builddir = /home/wanghan/Workspace/DASICS_ICT/DASICS-DEMO/httpd-apache/httpd-2.4.59
-srcdir       = /home/wanghan/Workspace/DASICS_ICT/DASICS-DEMO/httpd-apache/httpd-2.4.59/server
-builddir     = /home/wanghan/Workspace/DASICS_ICT/DASICS-DEMO/httpd-apache/httpd-2.4.59/server
-VPATH        = /home/wanghan/Workspace/DASICS_ICT/DASICS-DEMO/httpd-apache/httpd-2.4.59/server
+top_srcdir   = /home/wanghan/Workspace/DASICS_ICT/DASICS-DEMO/demo-apache/httpd-apache/httpd-2.4.59
+top_builddir = /home/wanghan/Workspace/DASICS_ICT/DASICS-DEMO/demo-apache/httpd-apache/httpd-2.4.59
+srcdir       = /home/wanghan/Workspace/DASICS_ICT/DASICS-DEMO/demo-apache/httpd-apache/httpd-2.4.59/server
+builddir     = /home/wanghan/Workspace/DASICS_ICT/DASICS-DEMO/demo-apache/httpd-apache/httpd-2.4.59/server
+VPATH        = /home/wanghan/Workspace/DASICS_ICT/DASICS-DEMO/demo-apache/httpd-apache/httpd-2.4.59/server
 
 CLEAN_TARGETS = gen_test_char test_char.h \
 	ApacheCoreOS2.def httpd.exp export_files \

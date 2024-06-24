@@ -7,13 +7,15 @@ DIR_HTTPD 		= $(PWD)/httpd-2.4.59
 
 # Pcre lib path
 DIR_PCRE 		= $(PWD)/pcre-8.45
+# Pcre2
+DIR_PCRE2		= $(PWD)/pcre2
 
 # Expat lib path, include XML
 DIR_EXPAT 		= $(PWD)/libexpat/expat
 DIR_LIBEXPAT	= $(PWD)/libexpat
 
 # Apr dependence for httpd
-DIR_APACHE		= $(PWD)/apache
+DIR_APACHE		= /apache
 DIR_APR 		= $(DIR_HTTPD)/srclib/apr
 DIR_APR_UTIL 	= $(DIR_HTTPD)/srclib/apr-util
 DIR_SRCLIB		= $(DIR_HTTPD)/srclib

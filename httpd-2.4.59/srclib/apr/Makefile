@@ -1,8 +1,8 @@
 
 srcdir=.
 
-top_srcdir=/home/wanghan/Workspace/DASICS_ICT/DASICS-DEMO/httpd-apache/httpd-2.4.59/srclib/apr
-top_blddir=/home/wanghan/Workspace/DASICS_ICT/DASICS-DEMO/httpd-apache/httpd-2.4.59/srclib/apr
+top_srcdir=/home/wanghan/Workspace/DASICS_ICT/DASICS-DEMO/demo-apache/httpd-apache/httpd-2.4.59/srclib/apr
+top_blddir=/home/wanghan/Workspace/DASICS_ICT/DASICS-DEMO/demo-apache/httpd-apache/httpd-2.4.59/srclib/apr
 
 #
 # APR (Apache Portable Runtime) library Makefile.
@@ -41,8 +41,8 @@ TARGETS = $(TARGET_LIB) include/private/apr_escape_test_char.h apr.exp apr-confi
 LT_VERSION = -version-info 7:4:7
 
 # bring in rules.mk for standard functionality
-include /home/wanghan/Workspace/DASICS_ICT/DASICS-DEMO/httpd-apache/httpd-2.4.59/srclib/apr/build/apr_rules.mk
-include /home/wanghan/Workspace/DASICS_ICT/DASICS-DEMO/httpd-apache/httpd-2.4.59/srclib/apr/build-outputs.mk
+include /home/wanghan/Workspace/DASICS_ICT/DASICS-DEMO/demo-apache/httpd-apache/httpd-2.4.59/srclib/apr/build/apr_rules.mk
+include /home/wanghan/Workspace/DASICS_ICT/DASICS-DEMO/demo-apache/httpd-apache/httpd-2.4.59/srclib/apr/build-outputs.mk
 
 CLEAN_TARGETS = apr-config.out apr.exp exports.c export_vars.c .make.dirs \
 	build/apr_rules.out tools/gen_test_char \

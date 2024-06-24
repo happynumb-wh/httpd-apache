@@ -17,3 +17,9 @@
 	path = haveged
 	url = git@github.com:jirka-h/haveged.git
 	branch = v1.9.8
+[submodule "LibDASICS"]
+	path = LibDASICS
+	url = git@github.com:DASICS-ICT/LibDASICS.git
+[submodule "pcre2"]
+	path = pcre2
+	url = git@github.com:PCRE2Project/pcre2.git

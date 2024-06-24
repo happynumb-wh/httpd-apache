@@ -8,6 +8,6 @@
 #   $ . path/to/apr-util/export_vars.sh
 #
 
-APRUTIL_EXPORT_INCLUDES="-I/home/wanghan/Workspace/DASICS_ICT/DASICS-DEMO/httpd-apache/apache/expat/include"
+APRUTIL_EXPORT_INCLUDES="-I/home/wanghan/Workspace/DASICS_ICT/DASICS-DEMO/demo-apache/httpd-apache/apache/expat/include"
 APRUTIL_EXPORT_LIBS="-lexpat"
-APRUTIL_LDFLAGS="-L/home/wanghan/Workspace/DASICS_ICT/DASICS-DEMO/httpd-apache/apache/expat/lib"
+APRUTIL_LDFLAGS="-L/home/wanghan/Workspace/DASICS_ICT/DASICS-DEMO/demo-apache/httpd-apache/apache/expat/lib"
