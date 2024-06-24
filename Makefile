@@ -25,6 +25,7 @@ DIR_LUA			= $(PWD)/lua-bin
 # The target dir of the httpd dependencies
 # --------------------------------------------------------
 BUILD_PCRE  	= $(PWD)/apache/pcre
+BUILD_PCRE2  	= $(PWD)/apache/pcre2
 BUILD_EXPAT 	= $(PWD)/apache/expat
 BUILD_APR  		= $(DIR_APR)
 BUILD_APR_UTIL	= $(DIR_APR_UTIL)
@@ -66,6 +67,12 @@ $(BUILD_PCRE):
 	cd $(DIR_PCRE) && mkdir -p build && cd build && ../configure --host=$(CORRESS_COMPILE) --prefix=$(BUILD_PCRE)
 	$(MAKE) -C $(DIR_PCRE)/build && $(MAKE) -C $(DIR_PCRE)/build install
 
+$(BUILD_PCRE2):
+	cd $(DIR_PCRE2) && mkdir -p build && cd build && ../configure --host=$(CORRESS_COMPILE) --enable-shared --prefix=$(BUILD_PCRE2)
+	$(MAKE) -C $(DIR_PCRE2)/build && $(MAKE) -C $(DIR_PCRE2)/build install
+
+
+
 # Compile expat
 $(BUILD_EXPAT):
 ifeq ($(wildcard $(DIR_LIBEXPAT)/*),)
@@ -75,15 +82,16 @@ endif
 	$(MAKE) -C $(DIR_EXPAT)/build && $(MAKE) -C $(DIR_EXPAT)/build install
 
 # Compile the httpd apache server
-$(DIR_APACHE): $(BUILD_APR) $(BUILD_APR_UTIL) $(BUILD_PCRE) $(BUILD_EXPAT)
+$(DIR_APACHE): $(BUILD_APR) $(BUILD_APR_UTIL) $(BUILD_PCRE) $(BUILD_EXPAT) $(BUILD_PCRE2)
 	mkdir -p apache
-	cd $(DIR_HTTPD) && ./configure --host=$(CORRESS_COMPILE) --prefix=$(DIR_APACHE) $(APACHE_MODULE) --with-port=9001 --enable-charset-lite --with-included-apr --with-pcre=$(BUILD_PCRE)/bin/pcre-config --with-expat=$(BUILD_EXPAT) --enable-ssl --enable-heartbeat --enable-static-ab
+	cd $(DIR_HTTPD) && ./configure --host=$(CORRESS_COMPILE) --prefix=$(DIR_APACHE) $(APACHE_MODULE) --with-port=9001 --enable-charset-lite --with-included-apr --with-pcre=$(BUILD_PCRE2)/bin/pcre2-config --with-expat=$(BUILD_EXPAT) --enable-ssl --enable-heartbeat --enable-static-ab
 	$(MAKE) -C $(DIR_HTTPD) && $(MAKE) -C $(DIR_HTTPD) install
 
 
 
 clean:
 	rm -rf $(BUILD_PCRE)
+	rm -rf $(BUILD_PCRE2)
 	rm -rf $(BUILD_EXPAT)
 	rm -rf $(BUILD_APACHE)
 	$(MAKE) -C $(DIR_HTTPD) clean
